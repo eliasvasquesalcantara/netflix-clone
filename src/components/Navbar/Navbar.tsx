@@ -1,9 +1,7 @@
-// import logo from '@/public/logo.png'
-import logo from "../../../public/assets/logo.png";
-import search from "../../../public/assets/search.svg";
+import logo from "../../../public/assets/logo-name.png";
 import userDefaultImage from "../../../public/assets/user-default.png";
-
 import Image from "next/image";
+
 
 const Navbar = () => {
   return (

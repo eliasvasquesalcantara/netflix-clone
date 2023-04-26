@@ -1,10 +1,7 @@
 .feed {
-  width: 1100px;
-  margin: auto;
+  margin-left: 38px;
   overflow-x: hidden;
-
-  // overflow-x:scroll;
-  // background-color:aquamarine;
+  position: relative;
 }
 
 .feed__title {
@@ -12,4 +9,10 @@
 
 .feed__cards {
   display: flex;
+}
+
+.feed__see__more {
+  position: absolute;
+  right: 10px;
+  top: 60px;
 }

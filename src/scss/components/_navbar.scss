@@ -1,7 +1,45 @@
-.navbar-container {
-    background-color: main-color;
+$main-background-color: #000;
+$font-color: #fff;
+
+.navbar {
+    // background-color: $main-background-color;
+    color: $font-color;
+
+    width: 1100px;
+    height: 70px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
 }
 
-p {
-    background-color: red;
+
+.navbar__logo {}
+.navbar__search {}
+.navbar__bell {
+    // width: 10px;
+    // height: 10px;
+    font-size: 5px;
+}
+.navbar__user {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+} 
+
+.navbar__left__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: blue;
+    width: 600px;
+}
+
+.navbar__right__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // background-color: red;
+    width: 180px;
 }

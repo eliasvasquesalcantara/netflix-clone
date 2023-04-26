@@ -1,2 +1,6 @@
-@use './base/variables' as *;
-@use './components/navbar' as *;
+@use "./base/geral";
+@use "./base/variables";
+
+@use "./components/navbar";
+@use "./components/feed";
+@use "./components/thumbnail";

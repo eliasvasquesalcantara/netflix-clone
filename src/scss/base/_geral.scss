@@ -1,0 +1,17 @@
+$background-color: #141414;
+$font-color: #fff;
+
+body {
+    background-color: $background-color;
+    color: $font-color;
+    background-image: url("../../public/assets/orange-black.webp");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}

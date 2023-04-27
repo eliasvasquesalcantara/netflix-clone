@@ -7,6 +7,7 @@ import onePiece from "../../../public/assets/one-piece.webp";
 import run from "../../../public/assets/run.webp";
 import Thumbnail from "../Thumbnail";
 import SeeMoreIcon from "./Components/SeeMoreIcon";
+import useFeed from "./hooks/useFeed";
 
 const imagesSrc: StaticImageData[] = [
   strangerThings,
@@ -14,22 +15,49 @@ const imagesSrc: StaticImageData[] = [
   suits,
   onePiece,
   run,
+  // repeat
   strangerThings,
+  agenteNoturno,
+  suits,
+  onePiece,
+  run,
 ];
 
+
 const Feed = () => {
+  const {
+    ref,
+    showLeftArrow,
+    handleLeftArrowClick,
+    showRightArrow,
+    handleRightArrowClick,
+    isLessOpacityThumbIndex,
+    isFeedFullWidthOrNot
+  } = useFeed();
+
   return (
-    <div className="feed">
+    <div className={"feed " + (isFeedFullWidthOrNot() && "feed--full--width")}>
       <h3 className="feed__title">Continuar assistindo como Nany</h3>
 
-      <div className="feed__cards">
-        {imagesSrc.map((src, index) => (
-          <Thumbnail src={src} lessBrightness={index === 5} />
-        ))}
-      </div>
+      <div className="feed__cards" ref={ref}>
+        {showLeftArrow() && (
+          <div className="feed__see__more__left" onClick={handleLeftArrowClick}>
+            <SeeMoreIcon />
+          </div>
+        )}
 
-      <div className="feed__see__more">
-        <SeeMoreIcon />
+        {imagesSrc.map((src, i) => (
+          <Thumbnail src={src} lessBrightness={isLessOpacityThumbIndex(i)} />
+        ))}
+
+        {showRightArrow() && (
+          <div
+            className="feed__see__more__right"
+            onClick={handleRightArrowClick}
+          >
+            <SeeMoreIcon />
+          </div>
+        )}
       </div>
     </div>
   );

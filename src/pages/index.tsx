@@ -19,6 +19,11 @@ export default function Home() {
         <Navbar />
 
         <Feed />
+        <Feed />
+        <Feed />
+        <Feed />
+        <Feed />
+        <Feed />
       </main>
     </>
   );

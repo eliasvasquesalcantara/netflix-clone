@@ -1,18 +1,30 @@
 .feed {
   margin-left: 38px;
-  overflow-x: hidden;
-  position: relative;
 }
 
-.feed__title {
+.feed__see__more__right {
+  position: sticky;
+  right: 20px;
+  cursor: pointer;
 }
+
+.feed__see__more__left {
+  position: sticky;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1;
+
+  rotate: 180deg;
+}
+
+
+.feed--full--width {
+  margin: 0;
+}
+
 
 .feed__cards {
   display: flex;
-}
-
-.feed__see__more {
-  position: absolute;
-  right: 10px;
-  top: 60px;
+  align-items: center;
+  overflow-x: hidden;
 }

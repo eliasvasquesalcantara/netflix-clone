@@ -1,29 +1,10 @@
-import { useRef, useState } from "react";
 import { StaticImageData } from "next/image";
-
-import strangerThings from "../../../../public/assets/stranger-things.jpg";
-import agenteNoturno from "../../../../public/assets/agente-noturno.jpg";
-import suits from "../../../../public/assets/suits.webp";
-import onePiece from "../../../../public/assets/one-piece.webp";
-import run from "../../../../public/assets/run.webp";
-
-const imagesSrc: StaticImageData[] = [
-  strangerThings,
-  agenteNoturno,
-  suits,
-  onePiece,
-  run,
-  strangerThings,
-  agenteNoturno,
-  suits,
-  onePiece,
-  run,
-];
+import { useRef, useState } from "react";
 
 const PIXELS_SCROLL_CLICK_ARROW = 222.5;
 const AMOUNT_THUMB_SHOWN = 5;
 
-const useFeed = () => {
+const useFeed = (imagesSrc: StaticImageData[]) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   const [seeMoreClickCount, setSeeMoreClickCount] = useState(0);

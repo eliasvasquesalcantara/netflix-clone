@@ -1,30 +1,14 @@
 import { StaticImageData } from "next/image";
-
-import strangerThings from "../../../public/assets/stranger-things.jpg";
-import agenteNoturno from "../../../public/assets/agente-noturno.jpg";
-import suits from "../../../public/assets/suits.webp";
-import onePiece from "../../../public/assets/one-piece.webp";
-import run from "../../../public/assets/run.webp";
 import Thumbnail from "../Thumbnail";
 import SeeMoreIcon from "./Components/SeeMoreIcon";
 import useFeed from "./hooks/useFeed";
 
-const imagesSrc: StaticImageData[] = [
-  strangerThings,
-  agenteNoturno,
-  suits,
-  onePiece,
-  run,
-  // repeat
-  strangerThings,
-  agenteNoturno,
-  suits,
-  onePiece,
-  run,
-];
+interface FeedProps {
+  title: string;
+  imagesSrc: StaticImageData[]
+}
 
-
-const Feed = () => {
+const Feed = ({ title, imagesSrc }: FeedProps) => {
   const {
     ref,
     showLeftArrow,
@@ -32,14 +16,14 @@ const Feed = () => {
     showRightArrow,
     handleRightArrowClick,
     isLessOpacityThumbIndex,
-    isFeedFullWidthOrNot
-  } = useFeed();
+    isFeedFullWidthOrNot,
+  } = useFeed(imagesSrc);
 
   return (
     <div className={"feed " + (isFeedFullWidthOrNot() && "feed--full--width")}>
-      <h3 className="feed__title">Continuar assistindo como Nany</h3>
+      <h3 className="feed__title">{title}</h3>
 
-      <div className="feed__cards" ref={ref}>
+      <div className="feed__thumbnails" ref={ref}>
         {showLeftArrow() && (
           <div className="feed__see__more__left" onClick={handleLeftArrowClick}>
             <SeeMoreIcon />

@@ -1,5 +1,6 @@
 .feed {
-  margin-left: 38px;
+  margin: 40px 0;
+  margin-left: 45px;
 }
 
 .feed__see__more__right {
@@ -19,12 +20,23 @@
 
 
 .feed--full--width {
-  margin: 0;
+  margin-left: 0;
+
+  .feed__title {
+    margin-left: 45px;
+  }
 }
 
 
-.feed__cards {
+.feed__thumbnails {
   display: flex;
   align-items: center;
   overflow-x: hidden;
+}
+
+
+.feed__title {
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 5px;
 }

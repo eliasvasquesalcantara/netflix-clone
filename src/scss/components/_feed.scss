@@ -1,16 +1,28 @@
 .feed {
   margin: 40px 0;
   margin-left: 45px;
-}
 
+  &:hover {
+    .feed__see__more__right,
+    .feed__see__more__left {
+      display: initial;
+    }
+  }
+}
 .feed__see__more__right {
-  position: sticky;
+  display: none;
+
+  position: absolute;
+  float: left;
   right: 20px;
   cursor: pointer;
 }
 
 .feed__see__more__left {
-  position: sticky;
+  display: none;
+
+  position: absolute;
+  float: left;
   left: 20px;
   cursor: pointer;
   z-index: 1;
@@ -27,13 +39,11 @@
   }
 }
 
-
 .feed__thumbnails {
   display: flex;
   align-items: center;
   overflow-x: hidden;
 }
-
 
 .feed__title {
   font-weight: 500;

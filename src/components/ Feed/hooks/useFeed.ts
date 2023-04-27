@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import { useRef, useState } from "react";
 
-const PIXELS_SCROLL_CLICK_ARROW = 222.5;
+const PIXELS_SCROLL_CLICK_ARROW = 212.5;
 const AMOUNT_THUMB_SHOWN = 5;
 
 const useFeed = (imagesSrc: StaticImageData[]) => {

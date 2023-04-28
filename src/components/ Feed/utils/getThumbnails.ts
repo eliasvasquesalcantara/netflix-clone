@@ -16,11 +16,9 @@ import tropaElite from "../../../../public/assets/tropa-de-elite.webp";
 
 import { IThumbnail, category } from "@/components/Thumbnail/utils/types";
 
-
 export const getThumbnails = (category: category): IThumbnail[] => {
   return thumbnails.filter((thumb) => thumb.categories.includes(category));
 };
-
 
 const thumbnails: IThumbnail[] = [
   {
@@ -134,7 +132,7 @@ const thumbnails: IThumbnail[] = [
       "romantic-comedy",
       "watch-again",
       "high-spirits",
-      "releases"
+      "releases",
     ],
   },
   {
@@ -145,4 +143,3 @@ const thumbnails: IThumbnail[] = [
     categories: ["my-list"],
   },
 ];
-

@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 const PIXELS_SCROLL_CLICK_ARROW = 212.5;
 const AMOUNT_THUMB_SHOWN = 5;
 
-const useFeed = (imagesSrc: StaticImageData[]) => {
+const useFeed = (amountThumbnails: number) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   const [seeMoreClickCount, setSeeMoreClickCount] = useState(0);
@@ -26,7 +26,7 @@ const useFeed = (imagesSrc: StaticImageData[]) => {
   const isScrolling = () => seeMoreClickCount > 0 && !isEndScroll();
 
   const isEndScroll = () =>
-    seeMoreClickCount === imagesSrc.length - AMOUNT_THUMB_SHOWN;
+    seeMoreClickCount === amountThumbnails - AMOUNT_THUMB_SHOWN;
 
   const isStartScroll = () => seeMoreClickCount === 0;
 

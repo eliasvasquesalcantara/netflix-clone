@@ -1,14 +1,14 @@
-import { StaticImageData } from "next/image";
 import Thumbnail from "../Thumbnail";
 import SeeMoreIcon from "./Components/SeeMoreIcon";
 import useFeed from "./hooks/useFeed";
+import { IThumbnail } from "../Thumbnail/utils/types";
 
 interface FeedProps {
   title: string;
-  imagesSrc: StaticImageData[]
+  thumbnails: IThumbnail[];
 }
 
-const Feed = ({ title, imagesSrc }: FeedProps) => {
+const Feed = ({ title, thumbnails }: FeedProps) => {
   const {
     ref,
     showLeftArrow,
@@ -17,7 +17,7 @@ const Feed = ({ title, imagesSrc }: FeedProps) => {
     handleRightArrowClick,
     isLessOpacityThumbIndex,
     isFeedFullWidthOrNot,
-  } = useFeed(imagesSrc);
+  } = useFeed(thumbnails.length);
 
   return (
     <div className={"feed " + (isFeedFullWidthOrNot() && "feed--full--width")}>
@@ -30,8 +30,12 @@ const Feed = ({ title, imagesSrc }: FeedProps) => {
           </div>
         )}
 
-        {imagesSrc.map((src, i) => (
-          <Thumbnail src={src} lessBrightness={isLessOpacityThumbIndex(i)} />
+        {thumbnails.map((thumb, i) => (
+          <Thumbnail
+            src={thumb.imageSrc}
+            lessBrightness={isLessOpacityThumbIndex(i)}
+            continueWatching={thumb.continueWatching}
+          />
         ))}
 
         {showRightArrow() && (

@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import Feed from "@/components/ Feed";
-import { getImages } from "@/components/ Feed/utils/getImages";
+import { getThumbnails } from "@/components/ Feed/utils/getThumbnails";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +21,12 @@ export default function Home() {
 
         <div style={{ marginTop: "450px" }}></div>
 
-        <Feed title="Continuar assistindo como Nany" imagesSrc={getImages(1)}  />
-        <Feed title="Séries de comédia romântica" imagesSrc={getImages(2)}  />
-        <Feed title="Filmes alto-astral" imagesSrc={getImages(3)}  />
-        <Feed title="Lançamentos" imagesSrc={getImages(4)}  />
-        <Feed title="Minha lista" imagesSrc={getImages(5)}  />
-        <Feed title="Assitir novamente" imagesSrc={getImages(6)} />
+        <Feed title="Continuar assistindo como Nany" thumbnails={getThumbnails("continue-watching")}  />
+        <Feed title="Séries de comédia romântica" thumbnails={getThumbnails("romantic-comedy")}  />
+        <Feed title="Filmes alto-astral" thumbnails={getThumbnails("high-spirits")}  />
+        <Feed title="Lançamentos" thumbnails={getThumbnails("releases")}  />
+        <Feed title="Minha lista" thumbnails={getThumbnails("my-list")}  />
+        <Feed title="Assitir novamente" thumbnails={getThumbnails("watch-again")} />
       </main>
     </>
   );

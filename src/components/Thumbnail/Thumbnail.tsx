@@ -1,12 +1,14 @@
 import Image, { StaticImageData } from "next/image";
+import { IContinueWatching } from "./utils/types";
 import ContinueWatching from "../ContinueWatching";
 
 interface CardProps {
-  src: StaticImageData;
+  src: string | StaticImageData;
   lessBrightness: boolean;
+  continueWatching: IContinueWatching;
 }
 
-const Thumbnail = ({ src, lessBrightness }: CardProps) => {
+const Thumbnail = ({ src, lessBrightness, continueWatching }: CardProps) => {
   return (
     <div className="thumbnail">
       <Image
@@ -19,7 +21,9 @@ const Thumbnail = ({ src, lessBrightness }: CardProps) => {
         }
       />
 
-      <ContinueWatching />
+      {continueWatching.porcentage !== 0 && (
+        <ContinueWatching porcentage={continueWatching.porcentage} />
+      )}
     </div>
   );
 };

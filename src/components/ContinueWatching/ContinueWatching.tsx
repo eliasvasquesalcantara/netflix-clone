@@ -10,7 +10,7 @@ const ContinueWatching = ({ porcentage }: ContinueWatchingProps) => {
     <div className="continue__watching">
       <ContinueWatchingProgress
         className="continue__watching__progress"
-        porcentage={fromPorcentageToPixels(porcentage)}
+        porcentage={porcentage}
       />
     </div>
   );

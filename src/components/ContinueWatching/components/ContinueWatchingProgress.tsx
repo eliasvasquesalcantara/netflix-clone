@@ -5,7 +5,7 @@ interface ContinueWatchingProgressProps {
 }
 
 const ContinueWatchingProgress = styled.div<ContinueWatchingProgressProps>`
-  width: ${(props) => props.porcentage}px;
+  width: ${(props) => props.porcentage}%;
 `;
 
 export default ContinueWatchingProgress;

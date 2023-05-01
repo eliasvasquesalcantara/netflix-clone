@@ -1,25 +1,26 @@
-import { StaticImageData } from "next/image";
 import { useRef, useState } from "react";
+import useResponsiveFeed from "./useResponsiveFeed";
 
-const PIXELS_SCROLL_CLICK_ARROW = 212.5;
 const AMOUNT_THUMB_SHOWN = 5;
 
 const useFeed = (amountThumbnails: number) => {
   const ref = useRef<HTMLDivElement | null>(null);
+
+  const { pixelsScrollClickArrow } = useResponsiveFeed()
 
   const [seeMoreClickCount, setSeeMoreClickCount] = useState(0);
 
   const handleLeftArrowClick = () => {
     if (!ref.current) return;
 
-    ref.current.scrollLeft -= PIXELS_SCROLL_CLICK_ARROW;
+    ref.current.scrollLeft -= pixelsScrollClickArrow;
     setSeeMoreClickCount((curr) => curr - 1);
   };
 
   const handleRightArrowClick = () => {
     if (!ref.current) return;
 
-    ref.current.scrollLeft += PIXELS_SCROLL_CLICK_ARROW;
+    ref.current.scrollLeft += pixelsScrollClickArrow;
     setSeeMoreClickCount((curr) => curr + 1);
   };
 

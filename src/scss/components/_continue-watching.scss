@@ -3,7 +3,7 @@ $color-progress: red;
 
 .continue__watching {
     background-color: $color-all-bar;
-    width: 120px;
+    width: 60%;
     height: 4px;
 
     margin: auto;
@@ -12,6 +12,5 @@ $color-progress: red;
 
 .continue__watching__progress {
     background-color: $color-progress;
-    width: 0px;
     height: 4px;
 }

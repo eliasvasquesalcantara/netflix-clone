@@ -26,7 +26,7 @@ const thumbnails: IThumbnail[] = [
     id: "",
     imageSrc: strangerThings,
     continueWatching: { porcentage: 88 },
-    categories: ["continue-watching", "my-list", "releases", "watch-again"],
+    categories: ["continue-watching", "my-list", "releases", "watch-again", "romantic-comedy"],
   },
   {
     name: "",

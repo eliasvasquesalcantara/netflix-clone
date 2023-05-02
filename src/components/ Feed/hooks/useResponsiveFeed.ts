@@ -6,10 +6,10 @@ const useResponsiveFeed = () => {
 
   useEffect(() => {
     if (window.innerWidth > 1050) setPixelsScrollClickArrow(212.5);
-    else if (window.innerWidth > 800) setPixelsScrollClickArrow(180); 
-    else if (window.innerWidth > 500) {
-    } else {
-    }
+    else if (window.innerWidth > 800) setPixelsScrollClickArrow(180);
+    else if (window.innerWidth > 650) setPixelsScrollClickArrow(178);
+    else if (window.innerWidth > 500) setPixelsScrollClickArrow(150);
+    else setPixelsScrollClickArrow(140);
   }, []);
 
   return { pixelsScrollClickArrow };

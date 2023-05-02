@@ -11,10 +11,12 @@ interface ThumbnailProps {
   continueWatching: IContinueWatching;
 }
 
-
-
-const Thumbnail = ({ src, lessBrightness, continueWatching }: ThumbnailProps) => {
-  const { widthThumbContainer } = useResponsiveThumbnail()
+const Thumbnail = ({
+  src,
+  lessBrightness,
+  continueWatching,
+}: ThumbnailProps) => {
+  const { widthThumbContainer } = useResponsiveThumbnail();
 
   return (
     <ResponsiveThumbnail width={widthThumbContainer}>

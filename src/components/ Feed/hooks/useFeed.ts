@@ -4,7 +4,7 @@ import useResponsiveFeed from "./useResponsiveFeed";
 const useFeed = (amountThumbnails: number) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
-  const { pixelsScrollClickArrow, amountThumbShown} = useResponsiveFeed()
+  const { pixelsScrollClickArrow, amountThumbShown } = useResponsiveFeed();
 
   const [seeMoreClickCount, setSeeMoreClickCount] = useState(0);
 

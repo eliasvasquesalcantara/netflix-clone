@@ -6,29 +6,29 @@ const useResponsiveFeed = () => {
   const [pixelsScrollClickArrow, setPixelsScrollClickArrow] =
     useState<number>(0);
 
-  const [amountThumbShown, setAmountThumbShow] = useState(5);
+  const [amountThumbsShowing, setAmountThumbsShowing] = useState(5);
 
   const [innerWidth, setInnerWidth] = useState(0);
 
   useEffect(() => {
     if (innerWidth > 1050) {
       setPixelsScrollClickArrow(212.5);
-      setAmountThumbShow(5);
+      setAmountThumbsShowing(5);
     } else if (innerWidth > 800) {
       setPixelsScrollClickArrow(208);
-      setAmountThumbShow(4);
+      setAmountThumbsShowing(4);
     } else if (innerWidth > 650) {
       setPixelsScrollClickArrow(200);
-      setAmountThumbShow(3);
+      setAmountThumbsShowing(3);
     } else if (innerWidth > 500) {
       setPixelsScrollClickArrow(172);
-      setAmountThumbShow(3);
+      setAmountThumbsShowing(3);
     } else if (innerWidth > 350) {
       setPixelsScrollClickArrow(185);
-      setAmountThumbShow(2);
+      setAmountThumbsShowing(2);
     } else {
       setPixelsScrollClickArrow(145);
-      setAmountThumbShow(2);
+      setAmountThumbsShowing(2);
     }
   }, [innerWidth]);
 
@@ -42,7 +42,7 @@ const useResponsiveFeed = () => {
     return () => clearTimeout(timeout);
   }, [count]);
 
-  return { pixelsScrollClickArrow, amountThumbShown };
+  return { pixelsScrollClickArrow, amountThumbsShowing };
 };
 
 export default useResponsiveFeed;

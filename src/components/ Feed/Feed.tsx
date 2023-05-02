@@ -11,20 +11,20 @@ interface FeedProps {
 const Feed = ({ title, thumbnails }: FeedProps) => {
   const {
     ref,
-    showLeftArrow,
+    showSeeMoreLeft,
     handleLeftArrowClick,
-    showRightArrow,
+    showSeeMoreRight,
     handleRightArrowClick,
     isLessOpacityThumbIndex,
-    isFeedFullWidthOrNot,
+    isFeedFullWidth,
   } = useFeed(thumbnails.length);
 
   return (
-    <div className={"feed " + (isFeedFullWidthOrNot() && "feed--full--width")}>
+    <div className={"feed " + (isFeedFullWidth() && "feed--full--width")}>
       <h3 className="feed__title">{title}</h3>
 
       <div className="feed__thumbnails" ref={ref}>
-        {showLeftArrow() && (
+        {showSeeMoreLeft() && (
           <div className="feed__see__more__left" onClick={handleLeftArrowClick}>
             <SeeMoreIcon />
           </div>
@@ -38,7 +38,7 @@ const Feed = ({ title, thumbnails }: FeedProps) => {
           />
         ))}
 
-        {showRightArrow() && (
+        {showSeeMoreRight() && (
           <div
             className="feed__see__more__right"
             onClick={handleRightArrowClick}

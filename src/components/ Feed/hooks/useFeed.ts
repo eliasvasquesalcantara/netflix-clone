@@ -1,10 +1,10 @@
 import { useRef, useState } from "react";
 import useResponsiveFeed from "./useResponsiveFeed";
 
-const useFeed = (amountThumbnails: number) => {
+const useFeed = (totalThumbnails: number) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
-  const { pixelsScrollClickArrow, amountThumbShown } = useResponsiveFeed();
+  const { pixelsScrollClickArrow, amountThumbsShowing } = useResponsiveFeed();
 
   const [seeMoreClickCount, setSeeMoreClickCount] = useState(0);
 
@@ -22,22 +22,22 @@ const useFeed = (amountThumbnails: number) => {
     setSeeMoreClickCount((curr) => curr + 1);
   };
 
-  const isScrolling = () => seeMoreClickCount > 0 && !isEndScroll();
+  const isScrolling = () => !isStartScroll() && !isEndScroll();
 
   const isEndScroll = () =>
-    seeMoreClickCount === amountThumbnails - amountThumbShown;
+    seeMoreClickCount === totalThumbnails - amountThumbsShowing;
 
   const isStartScroll = () => seeMoreClickCount === 0;
 
-  const isFeedFullWidthOrNot = () => isScrolling() || isEndScroll();
+  const isFeedFullWidth = () => !isStartScroll()
 
-  const showRightArrow = () => isScrolling() || isStartScroll();
+  const showSeeMoreRight = () => isScrolling() || isStartScroll();
 
-  const showLeftArrow = () => isScrolling() || isEndScroll();
+  const showSeeMoreLeft = () => isScrolling() || isEndScroll();
 
   const isLessOpacityThumbIndex = (index: number): boolean => {
     const isHalfThumbStart = index === seeMoreClickCount - 1;
-    const isHalfThumbEnd = index === amountThumbShown + seeMoreClickCount;
+    const isHalfThumbEnd = index === amountThumbsShowing + seeMoreClickCount;
 
     if (isHalfThumbStart || isHalfThumbEnd) return true;
     return false;
@@ -47,11 +47,11 @@ const useFeed = (amountThumbnails: number) => {
     isScrolling,
     ref,
     handleLeftArrowClick,
-    showLeftArrow,
+    showSeeMoreLeft,
     handleRightArrowClick,
-    showRightArrow,
+    showSeeMoreRight,
     isLessOpacityThumbIndex,
-    isFeedFullWidthOrNot,
+    isFeedFullWidth,
   };
 };
 

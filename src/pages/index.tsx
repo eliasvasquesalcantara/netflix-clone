@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import Feed from "@/components/ Feed";
 import { getThumbnails } from "@/components/ Feed/utils/getThumbnails";
+import Highlight from "@/components/Highlight";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function Home() {
       <main>
         <Navbar />
 
-        <div style={{ marginTop: "450px" }}></div>
+        <Highlight />
 
         <Feed title="Continuar assistindo como Nany" thumbnails={getThumbnails("continue-watching")}  />
         <Feed title="Séries de comédia romântica" thumbnails={getThumbnails("romantic-comedy")}  />

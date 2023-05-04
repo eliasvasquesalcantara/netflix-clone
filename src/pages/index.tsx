@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Feed from "@/components/ Feed";
 import { getThumbnails } from "@/components/ Feed/utils/getThumbnails";
 import Highlight from "@/components/Highlight";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,12 +23,26 @@ export default function Home() {
 
         <Highlight />
 
-        <Feed title="Continuar assistindo como Nany" thumbnails={getThumbnails("continue-watching")}  />
-        <Feed title="Séries de comédia romântica" thumbnails={getThumbnails("romantic-comedy")}  />
-        <Feed title="Filmes alto-astral" thumbnails={getThumbnails("high-spirits")}  />
-        <Feed title="Lançamentos" thumbnails={getThumbnails("releases")}  />
-        <Feed title="Minha lista" thumbnails={getThumbnails("my-list")}  />
-        <Feed title="Assitir novamente" thumbnails={getThumbnails("watch-again")} />
+        <Feed
+          title="Continuar assistindo como Nany"
+          thumbnails={getThumbnails("continue-watching")}
+        />
+        <Feed
+          title="Séries de comédia romântica"
+          thumbnails={getThumbnails("romantic-comedy")}
+        />
+        <Feed
+          title="Filmes alto-astral"
+          thumbnails={getThumbnails("high-spirits")}
+        />
+        <Feed title="Lançamentos" thumbnails={getThumbnails("releases")} />
+        <Feed title="Minha lista" thumbnails={getThumbnails("my-list")} />
+        <Feed
+          title="Assitir novamente"
+          thumbnails={getThumbnails("watch-again")}
+        />
+
+        <Footer />
       </main>
     </>
   );

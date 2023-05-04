@@ -7,6 +7,10 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 800px) {
+    display: block;
+  }
 }
 
 .footer__text {
@@ -28,7 +32,7 @@
   &:hover {
     color: #fff;
     text-decoration: none;
-  } 
+  }
 }
 
 .footer__icons__container {
@@ -38,6 +42,7 @@
 }
 
 .footer__copyright {
+  cursor: initial;
   &:hover {
     text-decoration: none;
   }

@@ -150,6 +150,11 @@ ul {
     margin-left: 2px;
   }
 }
+@media (max-width: 550px) {
+  .feed {
+    margin: 20px 0;
+  }
+}
 
 .feed__see__more__right {
   display: none;
@@ -186,6 +191,12 @@ ul {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 5px;
+}
+@media (max-width: 800px) {
+  .feed__title {
+    font-size: 15px;
+    font-weight: 600;
+  }
 }
 
 .thumbnail--less--brightness {
@@ -286,7 +297,7 @@ ul {
     margin-left: 10px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .highlight__content {
     margin-left: 0;
   }
@@ -298,12 +309,12 @@ ul {
 .highlight__title span {
   display: block;
 }
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
   .highlight__title {
     font-size: 50px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .highlight__title {
     font-size: 20px;
   }
@@ -316,13 +327,13 @@ ul {
   width: 50%;
   margin: 20px 0;
 }
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
   .highlight__description {
-    margin: 5px 0;
     font-size: 13px;
+    margin: 5px 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .highlight__description {
     font-size: 8px;
   }
@@ -343,6 +354,11 @@ ul {
     font-size: 10px;
   }
 }
+@media (max-width: 550px) {
+  .highlight__base__button svg {
+    width: 10px;
+  }
+}
 
 .highlight--button--watch {
   width: 130px;
@@ -353,19 +369,21 @@ ul {
 .highlight--button--watch:hover {
   background-color: #eee;
 }
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
   .highlight--button--watch {
     width: 90px;
     height: 28px;
+    font-size: 13px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .highlight--button--watch {
     width: 70px;
     height: 18px;
+    font-size: 8px;
   }
   .highlight--button--watch svg {
-    width: 10px;
+    width: 7px;
   }
 }
 
@@ -378,14 +396,16 @@ ul {
 .highlight--button--info:hover {
   background-color: rgba(54, 54, 54, 0.5490196078);
 }
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
   .highlight--button--info {
     width: 140px;
     height: 28px;
+    font-size: 13px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .highlight--button--info {
+    font-size: 8px;
     width: 80px;
     height: 18px;
   }

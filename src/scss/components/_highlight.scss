@@ -46,9 +46,10 @@ $hightlight-height: calc(100vw / 2.2);
     display: block;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: $breakpoint-lg) {
     font-size: $h1-font-size-md;
   }
+
   @media (max-width: $breakpoint-sm) {
     span {
       display: inline-block;
@@ -61,10 +62,11 @@ $hightlight-height: calc(100vw / 2.2);
   width: 50%;
   margin: 20px 0;
 
-  @media (max-width: $breakpoint-md) {
-    margin: 5px 0;
+  @media (max-width: $breakpoint-lg) {
     font-size: $p-size-sm-2;
+    margin: 5px 0;
   }
+
   @media (max-width: $breakpoint-sm) {
     font-size: $p-size-xs;
   }
@@ -86,6 +88,11 @@ $hightlight-height: calc(100vw / 2.2);
   @media (max-width: $breakpoint-md) {
     font-size: $btn-font-size-md;
   }
+  @media (max-width: $breakpoint-sm) {
+    svg {
+      width: 10px;
+    }
+  }
 }
 
 .highlight--button--watch {
@@ -98,15 +105,17 @@ $hightlight-height: calc(100vw / 2.2);
     background-color: $white-100;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: $breakpoint-lg) {
     width: 90px;
     height: 28px;
+    font-size: $p-size-sm-2;
   }
-  @media (max-width: 500px) {
+  @media (max-width: $breakpoint-sm) {
     width: 70px;
     height: 18px;
+    font-size: $p-size-xs;
     svg {
-      width: 10px;
+      width: 7px;
     }
   }
 }
@@ -121,11 +130,14 @@ $hightlight-height: calc(100vw / 2.2);
     background-color: $black-transparent-200;
   }
 
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-lg) {
     width: 140px;
     height: 28px;
+    font-size: $p-size-sm-2;
   }
   @media (max-width: $breakpoint-sm) {
+    font-size: $p-size-xs;
+
     width: 80px;
     height: 18px;
   }

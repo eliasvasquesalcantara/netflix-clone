@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #141414;
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar {
+  background-color: #141414;
+  transition: background-color 0.6s;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar__content {
+  color: #fff;
+  width: 95%;
+  height: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  width: 65px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.navbar__bell {
+  width: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar_bell_icon {
+  margin-top: 5px;
+}
+
+.navbar__search {
+  cursor: pointer;
+}
+
+.navbar__bell__notification {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 12px;
+  top: 2px;
+  border-radius: 100%;
+  background-color: #b90b0b;
+  font-size: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.navbar__user {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar__user img {
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.navbar__left__menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__links li,
+.navbar__links__mobile li,
+.navbar__infantil__link {
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.navbar__links li:hover,
+.navbar__links__mobile li:hover,
+.navbar__infantil__link:hover {
+  color: #ddd;
+}
+
+.navbar__links__mobile {
+  display: none;
+}
+
+.navbar__right__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__right__menu > div {
+  margin: 0 10px;
+}
+
+.navbar--remove--color {
+  background-color: inherit;
+  transition: all 0.6s;
+}
+
+@media (max-width: 1050px) {
+  .navbar__links li,
+  .navbar__links__mobile li,
+  .navbar__infantil__link {
+    font-size: 13px;
+  }
+}
+@media (max-width: 800px) {
+  .navbar__links,
+  .navbar__infantil__link {
+    display: none;
+  }
+  .navbar__links__mobile {
+    display: initial;
+  }
+}
+.feed {
+  margin: 40px 0;
+  margin-left: 45px;
+}
+.feed:hover .feed__see__more__right,
+.feed:hover .feed__see__more__left {
+  display: initial;
+}
+@media (max-width: 1050px) {
+  .feed {
+    margin-left: 2px;
+  }
+}
+
+.feed__see__more__right {
+  display: none;
+  position: absolute;
+  float: left;
+  right: 20px;
+  cursor: pointer;
+}
+
+.feed__see__more__left {
+  display: none;
+  position: absolute;
+  float: left;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1;
+  rotate: 180deg;
+}
+
+.feed--full--width {
+  margin-left: 0;
+}
+.feed--full--width .feed__title {
+  margin-left: 45px;
+}
+
+.feed__thumbnails {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.feed__title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.thumbnail--less--brightness {
+  opacity: 0.3;
+}
+
+.continue__watching {
+  background-color: #5B5B5B;
+  width: 60%;
+  height: 4px;
+  margin: auto;
+  margin-top: 0px;
+}
+
+.continue__watching__progress {
+  background-color: red;
+  height: 4px;
+}
+
+.footer__container {
+  width: 70%;
+  margin: auto;
+}
+
+.footer__link__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .footer__link__container {
+    display: block;
+  }
+}
+
+.footer__text {
+  color: #808080;
+  font-size: 13px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.footer__text:hover {
+  text-decoration: underline;
+}
+
+.footer--link--special {
+  border: 1px solid #808080;
+  display: inline-block;
+  padding: 5px;
+}
+.footer--link--special:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__icons__container > svg {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.footer__copyright {
+  cursor: initial;
+}
+.footer__copyright:hover {
+  text-decoration: none;
+}
+
+.highlight__container {
+  background-image: url("../../public/assets/orange-black.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  width: 100vw;
+  height: 45.4545454545vw;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.highlight__buttons__container {
+  display: flex;
+}
+
+.highlight__limiter {
+  margin-top: 35.7142857143vw;
+}
+
+.highlight__content {
+  height: 45.4545454545vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+}
+@media (max-width: 1050px) {
+  .highlight__content {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .highlight__content {
+    margin-left: 0;
+  }
+}
+
+.highlight__title {
+  font-size: 70px;
+}
+.highlight__title span {
+  display: block;
+}
+@media (max-width: 800px) {
+  .highlight__title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .highlight__title {
+    font-size: 20px;
+  }
+  .highlight__title span {
+    display: inline-block;
+  }
+}
+
+.highlight__description {
+  width: 50%;
+  margin: 20px 0;
+}
+@media (max-width: 800px) {
+  .highlight__description {
+    margin: 5px 0;
+    font-size: 13px;
+  }
+}
+@media (max-width: 500px) {
+  .highlight__description {
+    font-size: 8px;
+  }
+}
+
+.highlight__base__button {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .highlight__base__button {
+    font-size: 10px;
+  }
+}
+
+.highlight--button--watch {
+  width: 130px;
+  height: 35px;
+  margin-right: 10px;
+  background-color: #fff;
+}
+.highlight--button--watch:hover {
+  background-color: #eee;
+}
+@media (max-width: 800px) {
+  .highlight--button--watch {
+    width: 90px;
+    height: 28px;
+  }
+}
+@media (max-width: 500px) {
+  .highlight--button--watch {
+    width: 70px;
+    height: 18px;
+  }
+  .highlight--button--watch svg {
+    width: 10px;
+  }
+}
+
+.highlight--button--info {
+  width: 200px;
+  height: 35px;
+  background-color: rgba(114, 114, 114, 0.5490196078);
+  color: #fff;
+}
+.highlight--button--info:hover {
+  background-color: rgba(54, 54, 54, 0.5490196078);
+}
+@media (max-width: 800px) {
+  .highlight--button--info {
+    width: 140px;
+    height: 28px;
+  }
+}
+@media (max-width: 500px) {
+  .highlight--button--info {
+    width: 80px;
+    height: 18px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

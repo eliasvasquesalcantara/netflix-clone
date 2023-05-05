@@ -1,2 +1,43 @@
-$main-background-color: #000;
-$font-color: #fff;
+// =========== COLORS =========================================== //
+$primary-color: #141414;
+
+$red-500: #b90b0b;
+
+$black: #000;
+$black-100: #808080;
+$black-transparent-100: #7272728c;
+$black-transparent-200: #3636368c;
+
+$white: #fff;
+$white-100: #eee;
+$white-200: #ddd;
+
+// =========== FONT =========================================== //
+$h1-font-size-lg: 70px;
+$h1-font-size-md: 50px;
+$h1-font-size-sm: 20px;
+
+$p-size-lg: 17px;
+$p-size-md: 15px;
+$p-size-sm-2: 13px;
+$p-size-sm-1: 11px;
+$p-size-xs: 8px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$font-weight-extra-bold: 700;
+
+// =========== BUTTON =========================================== //
+$btn-font-size-lg: 14px;
+$btn-font-size-md: 10px;
+$btn-border-radius: 5px;
+
+// =========== BREAKPOINTS =========================================== //
+$breakpoint-sm: 500px;
+$breakpoint-md: 800px;
+$breakpoint-lg: 1050px;
+
+// =========== OTHERS =========================================== //
+$opacity-600: 0.3;
+$transition-time: 0.6s;

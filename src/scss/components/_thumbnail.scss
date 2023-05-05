@@ -1,15 +1,5 @@
-.thumbnail {
-}
-
-// .thumbnail__image {
-//   margin-right: 4px;
-
-//   width: 212.5px;
-//   height: 127.5px;
-
-//   cursor: pointer;
-// }
+@use "../base/variables" as *; 
 
 .thumbnail--less--brightness {
-  opacity: 0.5;
+  opacity: $opacity-600;
 }

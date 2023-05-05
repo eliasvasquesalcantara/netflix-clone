@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 .feed {
   margin: 40px 0;
   margin-left: 45px;
@@ -50,7 +52,7 @@
 }
 
 .feed__title {
-  font-weight: 500;
-  font-size: 17px;
+  font-weight: $font-weight-bold;
+  font-size: $h1-font-size-sm;
   margin-bottom: 5px;
 }

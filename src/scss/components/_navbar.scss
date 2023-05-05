@@ -1,9 +1,8 @@
-$background-color: #141414;
-$font-color: #fff;
+@use "../base/variables" as *;
 
 .navbar {
-  background-color: $background-color;
-  transition: background-color 0.6s;
+  background-color: $primary-color;
+  transition: background-color $transition-time;
 
   width: 100%;
   position: fixed;
@@ -12,7 +11,7 @@ $font-color: #fff;
 }
 
 .navbar__content {
-  color: $font-color;
+  color: $white;
 
   width: 95%;
   height: 50px;
@@ -28,16 +27,15 @@ $font-color: #fff;
   height: 23px;
 }
 
-.navbar__search {
-}
-
 .navbar__bell {
   width: 18px;
   position: relative;
 }
+
 .navbar_bell_icon {
   margin-top: 5px;
 }
+
 .navbar__bell__notification {
   width: 10px;
   height: 10px;
@@ -48,10 +46,10 @@ $font-color: #fff;
 
   border-radius: 100%;
 
-  background-color: #b90b0b;
+  background-color: $red-500;
 
-  font-size: 8px;
-  font-weight: bold;
+  font-size: $p-size-xs;
+  font-weight: $font-weight-bold;
   text-align: center;
 }
 
@@ -63,7 +61,7 @@ $font-color: #fff;
     margin-right: 5px;
     width: 30px;
     height: 30px;
-    border-radius: 5px;
+    border-radius: $btn-border-radius;
   }
 }
 
@@ -81,13 +79,13 @@ $font-color: #fff;
 .navbar__links li,
 .navbar__links__mobile li,
 .navbar__infantil__link {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: $p-size-sm-1;
+  font-weight: $font-weight-normal;
   margin-left: 20px;
   cursor: pointer;
 
   &:hover {
-    color: #ddd;
+    color: $white-200;
   }
 }
 
@@ -107,18 +105,18 @@ $font-color: #fff;
 
 .navbar--remove--color {
   background-color: inherit;
-  transition: all 0.6s;
+  transition: all $transition-time;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: $breakpoint-lg) {
   .navbar__links li,
   .navbar__links__mobile li,
   .navbar__infantil__link {
-    font-size: 11px;
+    font-size: $p-size-sm-2;
   }
 }
 
-@media (max-width: 881px) {
+@media (max-width: $breakpoint-md) {
   .navbar__links,
   .navbar__infantil__link {
     display: none;

@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 .footer__container {
   width: 70%;
   margin: auto;
@@ -14,8 +16,8 @@
 }
 
 .footer__text {
-  color: #808080;
-  font-size: 13px;
+  color: $black-100;
+  font-size: $p-size-sm-2;
   margin: 20px 0;
   cursor: pointer;
 
@@ -25,12 +27,12 @@
 }
 
 .footer--link--special {
-  border: 1px solid #808080;
+  border: 1px solid $black-100;
   display: inline-block;
   padding: 5px;
 
   &:hover {
-    color: #fff;
+    color: $white;
     text-decoration: none;
   }
 }

@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-export type category =
+export type Category =
   | "continue-watching"
   | "romantic-comedy"
   | "high-spirits"
@@ -17,5 +17,5 @@ export interface IThumbnail {
   id: string;
   imageSrc: string | StaticImageData;
   continueWatching: IContinueWatching;
-  categories: category[];
+  categories: Category[];
 }

@@ -1,5 +1,4 @@
 import ContinueWatchingProgress from "./components/ContinueWatchingProgress";
-import { fromPorcentageToPixels } from "./utils/helper-functions";
 
 interface ContinueWatchingProps {
   porcentage: number;

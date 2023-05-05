@@ -14,9 +14,9 @@ import sweetTooth from "../../../../public/assets/sweet-tooth.jpg";
 import teoriaTudo from "../../../../public/assets/teoria-tudo.webp";
 import tropaElite from "../../../../public/assets/tropa-de-elite.webp";
 
-import { IThumbnail, category } from "@/components/Thumbnail/utils/types";
+import { IThumbnail, Category } from "@/components/Thumbnail/utils/types";
 
-export const getThumbnails = (category: category): IThumbnail[] => {
+export const getThumbnails = (category: Category): IThumbnail[] => {
   return thumbnails.filter((thumb) => thumb.categories.includes(category));
 };
 

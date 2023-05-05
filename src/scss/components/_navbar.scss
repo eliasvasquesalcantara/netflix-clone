@@ -25,15 +25,21 @@
 .navbar__logo {
   width: 65px;
   height: 23px;
+  cursor: pointer;
 }
 
 .navbar__bell {
   width: 18px;
   position: relative;
+  cursor: pointer;
 }
 
 .navbar_bell_icon {
   margin-top: 5px;
+}
+
+.navbar__search {
+  cursor: pointer;
 }
 
 .navbar__bell__notification {
@@ -56,6 +62,7 @@
 .navbar__user {
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   img {
     margin-right: 5px;

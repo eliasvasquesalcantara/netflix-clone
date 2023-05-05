@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div
       className={
-        `navbar ` + removeBackgroundColor ? "navbar--remove--color" : ""
+        `navbar ` + (removeBackgroundColor ? "navbar--remove--color" : "")
       }
     >
       <div className="navbar__content">
@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar__right__menu">
-          <div>
+          <div className="navbar__search">
             <SearchIcon />
           </div>
 

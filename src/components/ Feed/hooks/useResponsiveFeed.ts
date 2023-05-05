@@ -11,25 +11,21 @@ const useResponsiveFeed = () => {
   const [innerWidth, setInnerWidth] = useState(0);
 
   useEffect(() => {
-    if (innerWidth > 1050) {
-      setPixelsScrollClickArrow(212.5);
-      setAmountThumbsShowing(5);
-    } else if (innerWidth > 800) {
-      setPixelsScrollClickArrow(208);
-      setAmountThumbsShowing(4);
-    } else if (innerWidth > 650) {
-      setPixelsScrollClickArrow(200);
-      setAmountThumbsShowing(3);
-    } else if (innerWidth > 500) {
-      setPixelsScrollClickArrow(172);
-      setAmountThumbsShowing(3);
-    } else if (innerWidth > 350) {
-      setPixelsScrollClickArrow(185);
-      setAmountThumbsShowing(2);
-    } else {
-      setPixelsScrollClickArrow(145);
-      setAmountThumbsShowing(2);
-    }
+    if (innerWidth > 1100) setPixelsScrollClickArrow(235); //V
+    else if (innerWidth > 1000) setPixelsScrollClickArrow(235); //V
+    else if (innerWidth > 900) setPixelsScrollClickArrow(215); //V
+    else if (innerWidth > 800) setPixelsScrollClickArrow(200); //V
+    else if (innerWidth > 700) setPixelsScrollClickArrow(215); //V
+    else if (innerWidth > 600) setPixelsScrollClickArrow(190); //V
+    else if (innerWidth > 500) setPixelsScrollClickArrow(160); //V
+    else if (innerWidth > 400) setPixelsScrollClickArrow(185); //V
+    else if (innerWidth > 300) setPixelsScrollClickArrow(145); //V
+    else setPixelsScrollClickArrow(105);
+
+    if (innerWidth > 1100) setAmountThumbsShowing(5);
+    else if (innerWidth > 800) setAmountThumbsShowing(4);
+    else if (innerWidth > 500) setAmountThumbsShowing(3);
+    else setAmountThumbsShowing(2);
   }, [innerWidth]);
 
   useEffect(() => {

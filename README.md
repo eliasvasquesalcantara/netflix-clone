@@ -1,6 +1,8 @@
 ## Netflix Clone
 
-Para rodar a aplicação:
+Veja a aplicação: [https://netflix-clone-brown-eight.vercel.app/](https://netflix-clone-brown-eight.vercel.app/)
+
+Para rodar a aplicação na sua máquina:
 
 1. Instalar dependências
 ```bash
@@ -16,4 +18,4 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.

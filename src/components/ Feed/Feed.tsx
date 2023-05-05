@@ -1,5 +1,5 @@
 import Thumbnail from "../Thumbnail";
-import SeeMoreIcon from "./Components/SeeMoreIcon";
+import SeeMoreIcon from "./components/SeeMoreIcon";
 import useFeed from "./hooks/useFeed";
 import { IThumbnail } from "../Thumbnail/utils/types";
 

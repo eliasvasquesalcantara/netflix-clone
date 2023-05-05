@@ -36,8 +36,10 @@ const useFeed = (totalThumbnails: number) => {
   const showSeeMoreLeft = () => isScrolling() || isEndScroll();
 
   const isLessOpacityThumbIndex = (index: number): boolean => {
-    const isHalfThumbStart = index === seeMoreClickCount - 1;
-    const isHalfThumbEnd = index === amountThumbsShowing + seeMoreClickCount;
+    const isHalfThumbStart = (index + 1) === seeMoreClickCount;
+
+    const indexThumbEnd = amountThumbsShowing + seeMoreClickCount;
+    const isHalfThumbEnd = index === indexThumbEnd;
 
     if (isHalfThumbStart || isHalfThumbEnd) return true;
     return false;

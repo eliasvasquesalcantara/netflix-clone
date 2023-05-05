@@ -265,7 +265,7 @@ ul {
 }
 
 .highlight__container {
-  background-image: url("../../public/assets/orange-black.jpg");
+  background-image: url("/assets/orange-black.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;

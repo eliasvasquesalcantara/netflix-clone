@@ -1,7 +1,7 @@
 # Netflix Clone
 
 ## Veja aplicação
-Veja a aplicação o [site](https://netflix-clone-brown-eight.vercel.app/) ou assita vídeo](https://www.youtube.com/watch?v=bX4KjXSzXuQ) onde mostro a aplicação.
+Veja a aplicação o [site](https://netflix-clone-brown-eight.vercel.app/) ou assita [vídeo](https://www.youtube.com/watch?v=bX4KjXSzXuQ) onde mostro a aplicação.
 
 
 ---
